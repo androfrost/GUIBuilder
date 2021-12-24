@@ -43,6 +43,7 @@ public class GUIRender implements Runnable {
 	static int nFontSize		= 16;
 	static int nDataSource		= 0;
 
+	// Sets files needed for the GUI and invokes the rendering of the GUI
 	public void invokeGUI(String frameContentFile, String frameSaveFile) {
 		if (!frameContentFile.isBlank())
 			GUIFile = frameContentFile;
@@ -71,11 +72,18 @@ public class GUIRender implements Runnable {
 		}
 
 	}
-
+	
+	
+	/*
+	 * Setters and Getters 
+	 */
+	
+	// Set path of save file
 	public void setSavePath(String tcSavePath) {
 		SavePath = tcSavePath;
 	}
 
+	// Set path of GUI Save file
 	public void setGUISavePath(String tcGUISavePath) {
 		GUISavePath = tcGUISavePath;
 	}
@@ -88,6 +96,26 @@ public class GUIRender implements Runnable {
 	// Get current Font value
 	public String getFont() {
 		return cFont;
+	}
+	
+	// Set Font Size value
+	public void setFontSize(int tcFontSize) {
+		nFontSize = tcFontSize;
+	}
+	
+	// Get current Font Size value
+	public int getFontSize() {
+		return nFontSize;
+	}
+	
+	// Set Data Source Identifier value
+	public void setDataSource(int tcDataSource) {
+		nDataSource = tcDataSource;
+	}
+	
+	// Get current Data Source Identifier value
+	public int getDataSource() {
+		return nDataSource;
 	}
 
 }
