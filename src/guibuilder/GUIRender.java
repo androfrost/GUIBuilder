@@ -1,35 +1,7 @@
 package guibuilder;
  
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.beans.PropertyChangeListener;
-import java.io.IOException;
-import java.sql.Time;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import fileprocessor.GeneralFileAction;
-import fileprocessor.delimitedFileProcessor;
-import genericprocedures.ArrayListGP;
-import genericprocedures.Chronology;
-import genericprocedures.Search;
-import genericprocedures.Sort;
-import genericprocedures.StringHandling;
 import guidatacontrol.DataControl;
 
 public class GUIRender implements Runnable {
@@ -39,6 +11,7 @@ public class GUIRender implements Runnable {
 	static String GUISavePath 	= "c:/GUIBuilder/";
 	static String SavePath 		= "c:/GUIBuilder/";
 
+	static String cFirstLine 	= "\"GUIID\",\"CONTAINERID\",\"PANELID\",\"FIELDTYPE\",\"TEXT\",\"WIDTH\",\"HEIGHT\",\"XLOC\",\"YLOC\",\"RELATEDID\",\"ARRAYID\",\"ACTION\",\"NEXTCONTAINERID\",\"LOADID\",\"KEY\"";
 	static String cFont		 	= "Arial";
 	static int nFontSize		= 16;
 	static int nDataSource		= 0;
@@ -96,6 +69,16 @@ public class GUIRender implements Runnable {
 	// Get current Font value
 	public String getFont() {
 		return cFont;
+	}
+	
+	// Set First Line value
+	public void setFirstLine(String tcFirstLine) {
+		cFirstLine = tcFirstLine;
+	}
+	
+	// Get current First Line value
+	public String getFirstLine() {
+		return cFirstLine;
 	}
 	
 	// Set Font Size value
