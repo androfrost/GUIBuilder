@@ -55,10 +55,20 @@ public class GUIRender implements Runnable {
 	public void setSavePath(String tcSavePath) {
 		SavePath = tcSavePath;
 	}
+	
+	// Get Save path
+	public String getSavePath() {
+		return SavePath;
+	}
 
 	// Set path of GUI Save file
 	public void setGUISavePath(String tcGUISavePath) {
 		GUISavePath = tcGUISavePath;
+	}
+	
+	// Get path of GUI Save file
+	public String getGUISavePath() {
+		return GUISavePath;
 	}
 	
 	// Set Font value
