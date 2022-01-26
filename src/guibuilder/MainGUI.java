@@ -14,6 +14,8 @@ public class MainGUI {
 		guiContentFile			 	= "testGUI.csv";
 		guiSaveFile					= "";
 		guiFilePath					= "c:/GUIBuilder/";
-		guiRender.invokeGUI(guiContentFile, guiSaveFile);
+		guiRender.setFontSize(14);
+		guiRender.setFont("SanSerif");
+		guiRender.invokeGUI(guiFilePath+guiContentFile, guiSaveFile);
 	}
 }
