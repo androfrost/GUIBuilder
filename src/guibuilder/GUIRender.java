@@ -28,6 +28,9 @@ public class GUIRender implements Runnable {
 	@Override
 	public void run() {
 
+		DataControl.setFontSize(nFontSize);
+		DataControl.setFont(cFont);
+		
 		try {
 			// Option for using different Data Control systems, more can be added later
 			switch(nDataSource) {
