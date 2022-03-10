@@ -63,6 +63,16 @@ public class GUIRender implements Runnable {
 	public String getSavePath() {
 		return SavePath;
 	}
+	
+	// Set save file
+	public void setSaveFile(String tcSaveFile) {
+		GUISaveFile = tcSaveFile;
+	}
+	
+	// Get Save path
+	public String getSaveFile() {
+		return GUISaveFile;
+	}
 
 	// Set path of GUI Save file
 	public void setGUISavePath(String tcGUISavePath) {
